@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:01:54 by descamil          #+#    #+#             */
-/*   Updated: 2023/12/11 18:01:10 by descamil         ###   ########.fr       */
+/*   Updated: 2024/01/09 16:59:49 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_strnstr(const char *s1, const char *s2, size_t len)
 	i = 0;
 	j = 0;
 	if (*s2 == '\0')
-		return ((char *)s1);
+		return (0);
 	while (s1[i] != '\0' && i < len)
 	{
 		if (s1[i] == s2[j])

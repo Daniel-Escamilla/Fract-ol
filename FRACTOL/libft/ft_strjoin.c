@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:20:42 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:37:12 by descamil         ###   ########.fr       */
+/*   Updated: 2024/01/08 17:04:59 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (ptr == NULL)
 		return (NULL);
 	while ((char)s1[i] != '\0')
-	{	
+	{
 		ptr[i] = (char)s1[i];
 		i++;
 	}

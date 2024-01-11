@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:23:46 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/27 17:44:13 by descamil         ###   ########.fr       */
+/*   Updated: 2024/01/08 17:04:33 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,4 @@ void	ft_bzero(void *s, size_t n)
 		s1[i] = '\0';
 		i++;
 	}
-}
-
-int main()
-{
-	void *str = "Frase";
-	
-	ft_bzero(str, ft_strlen(str));
-	return (0);
-	
 }

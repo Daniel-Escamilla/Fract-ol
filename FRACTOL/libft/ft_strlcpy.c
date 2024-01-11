@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:30:08 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:35:14 by descamil         ###   ########.fr       */
+/*   Updated: 2024/01/08 17:05:24 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t len_dest)
 		if (len_dest == 0)
 			return (ft_strlen(src));
 		while (len_dest > 1)
-		{	
+		{
 			dest[i] = src[i];
 			len_dest--;
 			i++;
@@ -32,7 +32,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t len_dest)
 	}
 	i = 0;
 	while (i < len_dest - 1 && src[i] != '\0')
-	{	
+	{
 		dest[i] = src[i];
 		i++;
 	}
