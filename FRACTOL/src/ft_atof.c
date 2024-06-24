@@ -6,36 +6,45 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 18:04:30 by descamil          #+#    #+#             */
-/*   Updated: 2023/12/14 18:20:51 by descamil         ###   ########.fr       */
+/*   Updated: 2024/06/05 14:35:42 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_fractol.h"
 
+double	ft_deci(double nb, char *str, int i)
+{
+	double	deci;
+
+	deci = 0.1;
+	if (str[i] == '-' && ++i > 0)
+		return (3);
+	while (ft_isdigit(str[++i]) == 1)
+	{
+		nb = nb + (str[i] - '0') * deci;
+		deci *= 0.1;
+	}
+	return (nb);
+}
+
 double	ft_atof(char *str)
 {
 	int		i;
-	double	m;
+	int		m;
 	double	nb;
-	double	deci;
-	
+
 	i = 0;
 	m = 1;
 	nb = 0;
-	deci = 0.1;
 	while (str[i] == ' ')
 		i++;
-	if (str[i] == '-' && str[i++])
+	if (str[i] == '.')
+		return (3);
+	if (str[i] == '-' && ++i > 0)
 		m = -1;
-	while (str[i] && ft_isdigit(str[i]) && str[i] != '.')
+	while (ft_isdigit(str[i]) == 1)
 		nb = nb * 10.0 + (str[i++] - '0');
-	if (str[i++] == '.')
-	{
-		while (str[i] && ft_isdigit(str[i]))
-		{
-			nb = nb + (str[i++] - '0') * deci;
-			deci *= 0.1;
-		}
-	}
+	if (str[i] == '.')
+		nb = ft_deci(nb, str, i);
 	return (nb * m);
 }

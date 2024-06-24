@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 16:34:21 by descamil          #+#    #+#             */
-/*   Updated: 2023/12/14 17:59:04 by descamil         ###   ########.fr       */
+/*   Updated: 2023/12/21 15:29:34 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 double	ft_pow_result(double number, int pow, int neg)
 {
 	double	new_number;
-	
+
 	pow -= 1;
 	new_number = number;
 	while (pow-- > 0)
@@ -26,12 +26,12 @@ double	ft_pow_result(double number, int pow, int neg)
 	return (new_number);
 }
 
-double  ft_pow(double number, int pow)
+double	ft_pow(double number, int pow)
 {
 	double	result;
 	int		neg;
 	int		m;
-	
+
 	m = 1;
 	neg = 1;
 	if (pow == 0 || number == 1)
@@ -53,7 +53,6 @@ double  ft_pow(double number, int pow)
 	result = ft_pow_result(number, pow, neg);
 	return (result * m);
 }
-
 
 // number + && pow + = + > 0 5^2 = 25;
 // number - && pow + % 2 == 0 = - > 0 -5^2 = 25;

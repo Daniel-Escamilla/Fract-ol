@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:01:10 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:33:47 by descamil         ###   ########.fr       */
+/*   Updated: 2024/06/05 11:17:43 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	total_size;
 	char	*ptr_chr;
 
-	if ((nmemb == SIZE_MAX) || (size == SIZE_MAX))
+	if ((nmemb == ULONG_MAX) || (size == ULONG_MAX))
 		return (NULL);
 	total_size = nmemb * size;
 	ptr = malloc(total_size);
