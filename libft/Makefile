@@ -1,3 +1,14 @@
+# Nombre de la librería
+NAME = libft.a
+
+# Compilador y flags
+CC = gcc
+CFLAGS = -g3 -Wall -Wextra -Werror
+
+# Directorio de fuentes
+SRC_DIR = src
+
+# Archivos fuente en el orden especificado
 SOURCE_FILES =  ft_atoi.c \
 				ft_itoa.c \
 				ft_bzero.c \
@@ -5,19 +16,19 @@ SOURCE_FILES =  ft_atoi.c \
 				ft_memchr.c \
 				ft_memcmp.c \
 				ft_memcpy.c \
-				ft_strchr.c \
 				ft_memset.c \
+				ft_strchr.c \
 				ft_strlen.c \
 				ft_calloc.c \
 				ft_strdup.c \
 				ft_substr.c \
-				ft_memmove.c \
-				ft_strlcat.c \
 				ft_isalnum.c \
 				ft_isalpha.c \
 				ft_isascii.c \
 				ft_isdigit.c \
 				ft_isprint.c \
+				ft_strlcat.c \
+				ft_memmove.c \
 				ft_strlcpy.c \
 				ft_strncmp.c \
 				ft_strnstr.c \
@@ -28,48 +39,49 @@ SOURCE_FILES =  ft_atoi.c \
 				ft_strtrim.c \
 				ft_strmapi.c \
 				ft_striteri.c \
-				ft_putstr_fd.c \
 				ft_putnbr_fd.c \
-				ft_putchar_fd.c \
+				ft_putstr_fd.c \
 				ft_putendl_fd.c \
+				ft_putchar_fd.c \
 
-BONUS_FILE =	ft_lstnew_bonus.c \
+# Archivos bonus en el orden especificado
+BONUS_FILES =	ft_lstnew_bonus.c \
 				ft_lstmap_bonus.c \
-				ft_lstiter_bonus.c \
 				ft_lstsize_bonus.c \
 				ft_lstlast_bonus.c \
+				ft_lstiter_bonus.c \
 				ft_lstclear_bonus.c \
 				ft_lstdelone_bonus.c \
 				ft_lstadd_back_bonus.c \
 				ft_lstadd_front_bonus.c \
 
-OBJECTS = $(SOURCE_FILES:.c=.o)
+# Directorio de archivos objeto
+OBJDIR = libft_objects
+# Archivos objeto generados a partir de los archivos fuente
+OBJS = $(addprefix $(OBJDIR)/, $(SOURCE_FILES:.c=.o))
+BONUS_OBJS = $(addprefix $(OBJDIR)/, $(BONUS_FILES:.c=.o))
 
-OBJECTS_BONUS = $(BONUS_FILE:.c=.o)
+# Reglas
+all: $(OBJDIR) $(NAME)
 
-NAME = libft.a
+$(OBJDIR):
+	@mkdir -p $@
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+$(NAME): $(OBJS)
+	@ar rcs $@ $^
 
-all: $(NAME)
+bonus: $(OBJDIR) $(NAME) $(BONUS_OBJS)
+	@ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
-$(NAME) : $(OBJECTS)
-	ar -crs $@ $?
-
-bonus: $(OBJECTS_BONUS)
-	ar -crs $(NAME) $?
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $<
+$(OBJDIR)/%.o: $(SRC_DIR)/%.c | $(OBJDIR)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJECTS)
-	rm -rf $(OBJECTS_BONUS)
+	rm -rf $(OBJDIR)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: re fclean clean all
+.PHONY: all clean fclean re bonus

@@ -7,7 +7,7 @@ SOURCE_FILES =	ft_pow.c \
 				ft_make_julia.c \
 				ft_make_mandel.c \
 				ft_fractol_utils.c \
-				ft_make_newton_bonus.c \
+				ft_make_newton_bonus.c
 
 NAME = fractol
 
@@ -23,23 +23,20 @@ LIBFT_NAME = libft.a
 LIBFT = $(LIBFT_PATH)$(LIBFT_NAME)
 
 INC =	-I ./libft/\
-		-I ./mlx_linux/\
+		-I ./mlx_linux/
 
 SOURCES_FILES = $(addprefix $(SOURCE_PATH), $(SOURCE_FILES))
 
 OBJECTS_PATH = objects/
-OBJECT = $(SOURCE_FILES:.c=.o)
-OBJECTS = $(addprefix $(OBJECTS_PATH), $(OBJECT))
+OBJECTS = $(addprefix $(OBJECTS_PATH), $(SOURCE_FILES:.c=.o))
 
 all: $(MLX) $(LIBFT) $(NAME)
 
-$(OBJECTS_PATH)%.o: $(SOURCE_PATH)%.c
+$(OBJECTS_PATH)%.o: $(SOURCE_PATH)%.c | $(OBJECTS_PATH)
 	$(CC) $(CFLAGS) -I/usr/include -Imlx_linux -c $< -o $@
 
-$(OBJECTS): $(OBJECTS_PATH)
-
 $(OBJECTS_PATH):
-	@mkdir $(OBJECTS_PATH)
+	@mkdir -p $(OBJECTS_PATH)
 
 $(MLX):
 	@make -sC $(MLX_PATH)
@@ -48,7 +45,7 @@ $(LIBFT):
 	@make -sC $(LIBFT_PATH)
 
 $(NAME): $(OBJECTS)
-	$(CC) $(OBJECTS) -o $(NAME) -Llibft/ -lft -lm -Lmlx_linux -lmlx -L/usr/lib -lXext -lX11  -lz
+	$(CC) $(OBJECTS) -o $(NAME) -Llibft/ -lft -lm -Lmlx_linux -lmlx -L/usr/lib -lXext -lX11 -lz
 
 bonus: all
 
@@ -59,8 +56,8 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
-	@rm -f $(LIBFT_PATH)$(LIBFT_PATH)
+	@rm -f $(LIBFT)
 
 re: fclean all
 
-.PHONY: re fclean clean all
+.PHONY: re fclean clean all bonus

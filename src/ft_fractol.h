@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:23:12 by descamil          #+#    #+#             */
-/*   Updated: 2024/11/06 18:27:02 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:46:50 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FT_FRACTOL_H
 
 # include "../mlx_linux/mlx.h"
-# include "../libft/libft.h"
+# include "../libft/src/libft.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <math.h>
