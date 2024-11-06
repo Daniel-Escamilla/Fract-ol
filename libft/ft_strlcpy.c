@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:30:08 by descamil          #+#    #+#             */
-/*   Updated: 2024/01/08 17:05:24 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:36:48 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,21 +39,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t len_dest)
 	dest[i] = '\0';
 	return (i);
 }
-/*
-int main()
-{
-	char dest[] = "Esta es la frase";
-	char str[] = "Esta es la";
-
-	ft_strlcpy(dest, str, sizeof(dest));
-	
-	if (strcmp(dest, str) == 0)
-	{
-		printf("Sí\n");
-		printf("%s\n", dest);
-	}
-	else
-		printf("No\n");
-	return (0);
-}
-*/

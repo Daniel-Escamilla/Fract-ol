@@ -1,13 +1,13 @@
 SOURCE_PATH = src/
-SOURCE_FILES =	ft_atof.c \
-				ft_fractol_utils.c \
+SOURCE_FILES =	ft_pow.c \
+				ft_atof.c \
+				ft_mouse.c \
+				ft_values.c \
 				ft_fractol.c \
 				ft_make_julia.c \
 				ft_make_mandel.c \
-				ft_mouse.c \
-				ft_pow.c \
-				ft_values.c \
-				ft_make_newton_bonus.c 
+				ft_fractol_utils.c \
+				ft_make_newton_bonus.c \
 
 NAME = fractol
 

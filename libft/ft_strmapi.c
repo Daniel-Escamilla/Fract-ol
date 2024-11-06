@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: descamil <descamil@student.42madrid>       +#+  +:+       +#+        */
+/*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 11:23:29 by descamil          #+#    #+#             */
-/*   Updated: 2023/10/07 11:58:45 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:36:54 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	arr[i] = '\0';
 	return (arr);
 }
-/*
-char to_up(unsigned int i, char s)
-{
-	s = s + 1;
-	return (s);
-}
-
-int main()
-{
-	char *str = "aaaa";
-	char *ptr;
-
-	ptr = ft_strmapi(str, to_up);
-	printf("Cadena: %s", ptr);
-
-	printf("\n");
-	return 0;
-}
-*/

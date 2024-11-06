@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:23:12 by descamil          #+#    #+#             */
-/*   Updated: 2024/09/17 13:53:25 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:27:02 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int		mouse_move(int key, int x, int y, t_data *img);
 int		ft_argc_4(t_data *img, char *argv2, char *argv3);
 
 long	ft_make_julia(t_data *img);
-long	ft_make_mandel(t_data *img);
+long	ft_make_mandel(t_data *img, int i);
 long	ft_color(int iterations, t_data *img);
 
 void	draw_fractal(t_data *img);

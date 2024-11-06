@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:15:59 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:35:42 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:37:00 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-/*
-int main()
-{
-	const char *cadena = "La m frase";
-	int caracter = 'm';
-	char *resultado = ft_strrchr(cadena, caracter);
-
-	if (resultado != NULL)
-		printf("%c, en la posición %ld.\n", caracter,cadena - resultado);
-	else	
-		printf("%c, no está.\n", caracter);
-	return (0);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 16:00:38 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:32:11 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:38:28 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,3 @@ int	ft_atoi(const char *str)
 	}
 	return (number * m);
 }
-
-// int main()
-// {
-// 	char str[] = "42"
-
-// 	int solv;
-// 	int solv2;
-
-// 	solv = atoi(str);
-// 	solv2 = ft_atoi(str);
-// 	printf("Resultado ATOI = El número es %d.\n", solv);
-// 	printf("Resultado FT_ATOI = El número es %d.\n", solv2);
-// 	return (0);
-// }

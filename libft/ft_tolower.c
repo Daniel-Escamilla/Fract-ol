@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 16:16:55 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:35:57 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:37:08 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-/*
-int main()
-{
-	int c = 'D';
-	c = ft_tolower(c);
-	printf("%c\n", c);
-	return (0);
-}
-*/

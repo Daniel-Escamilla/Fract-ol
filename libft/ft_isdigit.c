@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:11:11 by descamil          #+#    #+#             */
-/*   Updated: 2024/01/12 16:13:44 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:35:48 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-/*
-int main ()
-{
-	int c;
-
-	c = '2';
-	if (ft_isdigit (c) == 1)
-		printf("1\n");
-	return (0);
-}
-*/

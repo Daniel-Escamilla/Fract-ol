@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:55:18 by descamil          #+#    #+#             */
-/*   Updated: 2024/10/01 17:35:06 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:33:17 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,3 @@ int	ft_make_bonus(t_data *img)
 	color = ft_color_bonus(z_real, z_imag);
 	return (color);
 }
-

@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:01:10 by descamil          #+#    #+#             */
-/*   Updated: 2024/06/05 11:17:43 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:35:38 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	return (ptr);
 }
-/*
-int main()
-{
-	int *arr;
-	size_t num_elements = 5;
-	size_t element_size = sizeof(int);
-
-	arr = (int *)ft_calloc(num_elements, element_size);
-	if (arr == NULL)
-	{
-		printf("El puntero es NULL\n");
-		return (1);
-	}
-	else
-		printf("Se ha llenado\n");
-	free(arr);
-	return (0);
-}
-*/

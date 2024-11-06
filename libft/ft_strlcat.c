@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 17:44:55 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:35:10 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:36:47 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[lendst] = '\0';
 	return (total);
 }
-/*
-int main()
-{
-	char dst[] = "fghijklmn ";
-	const char src[] = "abcde";
-	size_t size = 1;
-	size_t result = ft_strlcat(dst, src, size);
-	printf("%zu\n", result);
-	printf("%s\n", dst);	
-	size_t result2 = strlcat(dst, src, size);
-	printf("%zu\n", result2);
-	printf("%s\n", dst);
-	return (0);
-}
-*/

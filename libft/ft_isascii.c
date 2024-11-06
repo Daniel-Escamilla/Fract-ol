@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 15:42:40 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:33:53 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:35:46 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-/*
-int main ()
-{
-	int c;
-
-	c = 'J';
-	if (ft_isascii(c) == 1)
-	{
-		printf("1 \n");
-	}
-	return (0);
-}
-*/

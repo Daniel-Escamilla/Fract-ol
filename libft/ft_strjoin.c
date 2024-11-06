@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:20:42 by descamil          #+#    #+#             */
-/*   Updated: 2024/01/08 17:04:59 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:36:44 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
-// int main()
-// {
-// 	const char *s1 = "Hola";
-// 	const char *s2 = "Adios";
-// 	char *ptr;
-
-// 	ptr = ft_strjoin(s1, s2);
-
-// 	printf("Join: %s\n", ptr);
-// 	free(ptr);
-// 	return (0);
-// }

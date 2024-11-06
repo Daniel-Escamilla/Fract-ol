@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 19:27:24 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:35:01 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:36:40 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,3 @@ char	*ft_strdup(const char *s)
 	arr[len] = '\0';
 	return (arr);
 }
-
-/*
-int main()
-{
-	const char *s = "Inicio   \n  df sf \t  sdfe1Fin";
-	char *duplicate = ft_strdup(s);
-	char *duplicate2 = strdup(s);
-
-	if (s == NULL)
-		exit(1);
-	printf("Duplicate: %s.\n", duplicate);
-	printf("Dplicate2: %s.\n", duplicate2);
-	free(duplicate);
-	return 0;
-}
-*/

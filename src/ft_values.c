@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:46:25 by descamil          #+#    #+#             */
-/*   Updated: 2024/10/01 17:35:35 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:33:54 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	draw_fractal(t_data *img)
 		while (img->y < img->size)
 		{
 			if (ft_strncmp(img->name, "mandel", 6) == 0)
-				my_mlx_pixel_put(img, img->x, img->y, ft_make_mandel(img));
+				my_mlx_pixel_put(img, img->x, img->y, ft_make_mandel(img, 0));
 			else if (ft_strncmp(img->name, "julia", 5) == 0)
 				my_mlx_pixel_put(img, img->x, img->y, ft_make_julia(img));
 			else if (ft_strncmp(img->name, "bonus", 5) == 0)
@@ -80,5 +80,5 @@ void	ft_set_values(t_data *img)
 	img->color = 16777216;
 	img->color2 = 8192;
 	img->zero = 0.000001;
-	img->empty = 0;	
+	img->empty = 0;
 }

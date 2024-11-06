@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:38:21 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:34:21 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:36:14 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-/*
-int main()
-{
-	t_list	*lista = NULL;
-	char	*data1 = "Element1";
-	char	*data2 = "Element2";
-	t_list	*node1 = ft_lstnew(data1);
-	t_list	*node2 = ft_lstnew(data2);
-
-	ft_lstadd_back(&lista, node1);
-	ft_lstadd_back(&lista, node2);
-
-	int size = ft_lstsize(lista);
-	printf ("Tamaño : %d\n", size);
-
-	return (0);
-}
-*/

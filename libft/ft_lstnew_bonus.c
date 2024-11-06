@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 10:57:35 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:33:35 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:36:11 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
-/*
-int main()
-{
-    char *data = "Hello, World!";
-    t_list *new_node = ft_lstnew(data);
-    if (new_node) {
-        printf("New node: %s\n", (char *)new_node->content);
-        free(new_node);
-    } else {
-        printf("Failed to create a new node.\n");
-    }
-    return 0;
-}
-*/

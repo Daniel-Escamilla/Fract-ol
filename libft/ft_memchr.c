@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:55:13 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:34:22 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:36:19 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,23 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*
-int main()
-{
-	const char s[] = "La frase";
-	int c = 'w';
-	size_t n = 4;
-	const char *mem = memchr(s, c, n);
-	if (mem == NULL)
-	{
-		printf("La %c no está.\n", (char)c);
-		return (0);
-	}
-	else
-	{
-		printf("La %c está en el puntero %p.\n", (char)c, mem);
-		return (1);
-	}
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 17:06:31 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:34:41 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:36:35 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (ptr);
 }
-/*
-int main ()
-{
-	char str[] = "La frase";
-	ft_memset(str, 'H', 3);
-	printf("%s \n", str);
-	return (0);
-}
-*/

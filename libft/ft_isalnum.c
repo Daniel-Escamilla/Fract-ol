@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:26:35 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:33:49 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:35:41 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-/*
-int main ()
-{
-	int c;
-
-	c = 'A';
-	if (ft_isalnum (c) == 1)
-	{
-		printf("1 \n");
-	}
-	return (0);
-}
-*/

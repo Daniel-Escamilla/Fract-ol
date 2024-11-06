@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:24:40 by descamil          #+#    #+#             */
-/*   Updated: 2024/09/17 13:53:17 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:38:43 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void	ft_change_colors(int key, t_data *img)
 
 void	ft_arrows(int key, t_data *img)
 {
-	printf("KEY --> %d\n", key);
 	if (key == 65361)
 	{
 		img->min_x -= 0.5 * 0.1 * img->rango_x;
@@ -90,7 +89,6 @@ void	ft_arrows(int key, t_data *img)
 
 int	key_hook(int key, t_data *img)
 {
-	printf("%d\n", key);
 	if (key == 65307)
 		end_program(img);
 	ft_arrows(key, img);

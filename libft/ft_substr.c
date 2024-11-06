@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:34:35 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:35:50 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:37:05 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(sub, s + start, len + 1);
 	return (sub);
 }
-/*
-int main()
-{
-	char const *s = "La frase";
-	unsigned int start = 5;
-	size_t len = ft_strlen(s);
-	char *ptr = ft_substr(s, start, len);
-	
-	printf("Uso de substr: %s\n", ptr);
-	return (0);
-}
-*/

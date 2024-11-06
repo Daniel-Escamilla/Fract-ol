@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:50:32 by descamil          #+#    #+#             */
-/*   Updated: 2023/11/21 18:34:28 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:36:30 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t num)
 	}
 	return (dest);
 }
-
-/*
-int main()
-{
-	char destination[50];
-	ft_memcpy(destination, "La frase", 4);
-	destination[4] = '\0';
-
-	printf("%s \n", destination);
-	return (0);
-}
-*/
