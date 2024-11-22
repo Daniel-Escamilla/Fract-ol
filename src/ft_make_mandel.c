@@ -6,14 +6,12 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 17:03:56 by descamil          #+#    #+#             */
-/*   Updated: 2024/11/06 18:39:22 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/22 16:47:36 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_fractol.h"
 
-// (c_real + 1)² + c_imag² < 0.0625
-// (c_real - 0.25)² + c_imag² * ((c_real - 0.25)² + c_imag² + (c_real - 0.25)) < 0.25 * c_imag²
 int	ft_check_mandel_point(t_data *img)
 {
 	double	q;

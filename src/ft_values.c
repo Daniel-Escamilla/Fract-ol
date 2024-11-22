@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:46:25 by descamil          #+#    #+#             */
-/*   Updated: 2024/11/06 18:33:54 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/22 17:20:29 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,8 @@ void	ft_set_values(t_data *img)
 	img->size = 500;
 	img->max_iterations = 100;
 	img->color = 16777216;
-	img->color2 = 8192;
+	img->color2 = 4096;
 	img->zero = 0.000001;
 	img->empty = 0;
+	img->name = NULL;
 }
