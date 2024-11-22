@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:23:12 by descamil          #+#    #+#             */
-/*   Updated: 2024/11/06 18:46:50 by descamil         ###   ########.fr       */
+/*   Updated: 2024/11/22 17:42:27 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,22 @@
 # include <unistd.h>
 # include <limits.h>
 # include <fcntl.h>
+
+# define LEFT 65361
+# define RIGHT 65363
+# define UP 65362
+# define DOWN 65364
+
+# define ZERO 48
+# define ONE 49
+# define TWO 50
+# define THREE 51
+# define FOUR 52
+# define FIVE 53
+# define SIX 54
+# define SEVEN 55
+# define EIGHT 56
+# define NINE 57
 
 typedef struct s_temp
 {
