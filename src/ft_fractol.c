@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 19:05:06 by descamil          #+#    #+#             */
-/*   Updated: 2024/11/22 17:21:27 by descamil         ###   ########.fr       */
+/*   Updated: 2024/12/04 10:26:34 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,10 @@ int	ft_argc_4(t_data *img, char *argv2, char *argv3)
 	img->c_julia_r = ft_atof(argv2);
 	img->c_julia_i = ft_atof(argv3);
 	if (((ft_isnum(argv2) == 0 || ft_isnum(argv3) == 0))
-		|| img->c_julia_r < -2.00000 || img->c_julia_r > 2.00000
-		|| img->c_julia_i < -2.00000 || img->c_julia_i > 2.00000)
+		|| img->c_julia_r < -2.000000000000000
+		|| img->c_julia_r > 2.000000000000000
+		|| img->c_julia_i < -2.000000000000000
+		|| img->c_julia_i > 2.000000000000000)
 	{
 		write(2, "Write: julia '-2.0 <-> 2.0' '-2.0 <-> 2.0'\n", 43);
 		write(2, "Recomended: \n", 13);
@@ -85,11 +87,10 @@ int	main(int argc, char *argv[])
 	if (argv && argv[1])
 		img.name = argv[1];
 	if (argc == 4 && ft_strncmp(img.name, "julia", 5) == 0
-		&& ft_strlen(img.name) == 5)
-	{
-		if (ft_argc_4(&img, argv[2], argv[3]) == 0)
-			return (1);
-	}
+		&& ft_strlen(img.name) == 5 && ft_argc_4(&img, argv[2], argv[3]) == 0)
+		return (1);
+	if (ft_strncmp(img.name, "julia", 5) == 0)
+		img.color2 = 4096;
 	if ((argc != 2 && argc != 4) || ft_name(&img) == 1)
 	{
 		write(2, "Write: 'mandel' o 'julia [x y]' o 'bonus'\nError\n", 49);
