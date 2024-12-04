@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:24:40 by descamil          #+#    #+#             */
-/*   Updated: 2024/11/22 17:44:14 by descamil         ###   ########.fr       */
+/*   Updated: 2024/12/04 09:59:50 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,17 +42,17 @@ long	ft_color(int iterations, t_data *img)
 void	ft_change_colors(int key, t_data *img)
 {
 	if (key == ONE)
-		img->color2 = 4096;
+		img->color2 = 1024;
 	else if (key == TWO)
 		img->color2 -= 128;
 	else if (key == THREE)
 		img->color2 += 128;
 	else if (key == FOUR)
-		img->color2 = 16;
+		img->color2 = 16384;
 	else if (key == FIVE)
 		img->color2 = 2048;
 	else if (key == SIX)
-		img->color2 = 1024;
+		img->color2 = 4096;
 	else if (key == SEVEN)
 		img->color2 += 1;
 	else if (key == EIGHT)
