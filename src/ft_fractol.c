@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 19:05:06 by descamil          #+#    #+#             */
-/*   Updated: 2024/12/04 12:37:49 by descamil         ###   ########.fr       */
+/*   Updated: 2024/12/11 12:15:46 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int	ft_argc_4(t_data *img, char *argv2, char *argv3)
 		write(2, "Error\n", 7);
 		return (0);
 	}
+	img->color2 = 2048;
 	img->empty = 1;
 	return (1);
 }
@@ -73,7 +74,10 @@ int	ft_name(t_data *img)
 	if ((ft_strncmp(img->name, "mandel", 6) == 0) && ft_strlen(img->name) == 6)
 		return (0);
 	if ((ft_strncmp(img->name, "julia", 5) == 0) && ft_strlen(img->name) == 5)
+	{
+		img->color2 = 2048;
 		return (0);
+	}
 	if ((ft_strncmp(img->name, "bonus", 5) == 0) && ft_strlen(img->name) == 5)
 		return (0);
 	return (1);
@@ -84,22 +88,19 @@ int	main(int argc, char *argv[])
 	t_data	img;
 
 	ft_set_values(&img);
-	if (argc != 2 && argc != 4)
-	{
-		write(2, "Write: 'mandel' o 'julia [x y]' o 'bonus'\nError\n", 49);
-		return (1);
-	}
-	img.name = argv[1];
+	if (argc > 1)
+		img.name = argv[1];
 	if (argc == 4 && ft_strncmp(img.name, "julia", 5) == 0
 		&& ft_strlen(img.name) == 5 && ft_argc_4(&img, argv[2], argv[3]) == 0)
 		return (1);
+	if (argc != 2)
+		return (write(2, "Write: 'mandel' o 'julia [x y]' o 'bonus'\n"
+				"Error\n", 49) - 48);
 	if (ft_strncmp(img.name, "julia", 5) == 0)
 		img.color2 = 4096;
 	if (ft_name(&img) == 1)
-	{
-		write(2, "Write: 'mandel' o 'julia [x y]' o 'bonus'\nError\n", 49);
-		return (1);
-	}
+		return (write(2, "Write: 'mandel' o 'julia [x y]' o 'bonus'\n"
+				"Error\n", 49) - 48);
 	ft_create_window(&img);
 	draw_fractal(&img);
 	mlx_key_hook(img.mlx_win, key_hook, &img);
